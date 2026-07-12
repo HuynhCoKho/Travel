@@ -10,6 +10,7 @@ Endpoint là URL Web App kết thúc bằng `/exec`. Response luôn có `success
 - `GET ?action=get&entity=trips&id=TRIP_x&token=...`
 - `GET ?action=getDashboard&tripId=TRIP_x&token=...`
 - `GET ?action=getTripDetails&tripId=TRIP_x&token=...`
+- `GET ?action=getExchangeRate&from=USD&to=VND` lấy tỷ giá tham khảo mới nhất; người dùng có thể nhập tay khi ghi chi phí.
 - `GET ?action=exportTrip&tripId=TRIP_x&token=...`
 
 ## Ghi

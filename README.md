@@ -8,6 +8,7 @@
 - CRUD thật, xóa mềm, tìm kiếm, tổng hợp chi phí, xuất CSV và giao diện in.
 - Responsive từ 360 px, dark mode, PWA cache tài nguyên và cache dữ liệu chỉ đọc khi offline.
 - Cấu hình URL API/token ngay trên thiết bị; không có secret trong repository.
+- Tác giả: **Huỳnh Cỏ Khô**. Đơn vị báo cáo mặc định VND; chi phí ngoại tệ hỗ trợ tỷ giá tham khảo trực tuyến hoặc nhập tay và tự quy đổi sang VND.
 - Backend tạo đủ 12 sheet và hỗ trợ toàn bộ entity để dễ mở rộng các màn hình tiếp theo.
 
 ## Kiến trúc
