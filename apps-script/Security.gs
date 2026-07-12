@@ -1,0 +1,1 @@
+function authorize_(token){var expected=PropertiesService.getScriptProperties().getProperty('ACCESS_TOKEN');if(!expected)throw apiError_('TOKEN_NOT_CONFIGURED','Quản trị viên chưa thiết lập access token');if(String(token||'')!==expected)throw apiError_('UNAUTHORIZED','Access token không đúng')}
