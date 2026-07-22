@@ -1,4 +1,4 @@
-.expense-stats{grid-template-columns:repeat(3,minmax(180px,1fr));margin-bottom:16px}
+.expense-stats{grid-template-columns:repeat(3,minmax(180px,1fr));margin-bottom:16px}.over-budget{color:var(--danger)!important}.under-budget{color:#16805c!important}.trip-cost-label{display:block;color:var(--muted);margin-bottom:3px}
 .expense-filters{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:12px;align-items:end;margin-bottom:16px}
 .expense-item{cursor:pointer}
 .expense-item:hover{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 4%,var(--surface))}
