@@ -18,7 +18,8 @@ async function route(){if(!location.hash||location.hash==='#'||location.hash==='
 addEventListener('hashchange',route);route();
 
 const expenseVnd=r=>Number(r.ConvertedAmount)||(Number(r.Amount)||0)*(Number(r.ExchangeRate)||1);
-const isActual=r=>String(r.ExpenseType||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().includes('thuc');
+const expenseType=r=>String(r.ExpenseType||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+const isActual=r=>!expenseType(r).includes('du kien');
 
 async function dashboard(){const expenseGroups=await Promise.all(trips.map(t=>api.list('expenses',{tripId:t.TripID},true).catch(()=>[]))),actualByTrip=Object.fromEntries(trips.map((t,i)=>[t.TripID,expenseGroups[i].filter(isActual).reduce((s,r)=>s+expenseVnd(r),0)])),planned=trips.reduce((s,t)=>s+(+t.PlannedBudget||0),0),actual=Object.values(actualByTrip).reduce((s,v)=>s+v,0),now=dateInput(new Date().toISOString()),up=trips.filter(t=>dateInput(t.EndDate)>=now).sort((a,b)=>dateInput(a.StartDate).localeCompare(dateInput(b.StartDate)))[0];document.querySelector('#app').innerHTML=`<div class="grid stats"><div class="card stat">Chuyến đi<strong>${trips.length}</strong></div><div class="card stat">Ngân sách<strong>${money(planned)}</strong></div><div class="card stat">Đã chi<strong>${money(actual)}</strong></div><div class="card stat">Sắp tới<strong>${up?esc(up.Name):'—'}</strong></div></div><h2 style="margin-top:24px">Chuyến đi gần đây</h2>${tripCards(trips.slice(0,6),actualByTrip)}`;bindTripActions()}
 
