@@ -11,5 +11,17 @@
   <main><header><button id="menu" class="ghost">☰</button><div><h1 id="title">Tổng quan</h1><p id="subtitle">Quản lý mọi chuyến đi ở một nơi</p></div><span id="network" class="badge">Trực tuyến</span></header><section id="app" aria-live="polite"></section><footer style="padding:32px 0;text-align:center;color:var(--muted)">Travel Manager · Tác giả: Huỳnh Cỏ Khô</footer></main>
   <div id="toast" role="status"></div><div id="modal" class="modal hidden"><div class="modal-card"><button class="modal-close">×</button><div id="modal-body"></div></div></div>
   <script src="assets/js/config.js?v=11"></script><script type="module" src="assets/js/app.js?v=11"></script><script type="module" src="assets/js/exchange.js?v=11"></script>
+
+<!-- Huynh Co Kho ownership stamp -->
+<div class="hck-owner-stamp" aria-label="Hu?nh C? Kh?">
+  <img src="assets/huynh-co-kho-stamp.png" alt="Hu?nh C? Kh?" loading="lazy" decoding="async">
+</div>
+<style>
+  .hck-owner-stamp{position:fixed;right:14px;bottom:14px;width:72px;height:72px;z-index:2147483000;opacity:.9;pointer-events:none;user-select:none}
+  .hck-owner-stamp img{display:block;width:100%;height:100%;object-fit:contain;border-radius:8px;filter:drop-shadow(0 3px 8px rgba(0,0,0,.18))}
+  @media (max-width:640px){.hck-owner-stamp{right:10px;bottom:10px;width:56px;height:56px;opacity:.86}}
+  @media print{.hck-owner-stamp{display:none!important}}
+</style>
+<!-- /Huynh Co Kho ownership stamp -->
 </body>
 </html>
