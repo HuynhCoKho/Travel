@@ -14,7 +14,7 @@ if(localStorage.theme==='dark')document.documentElement.classList.add('dark');
 addEventListener('online',network);addEventListener('offline',network);
 function network(){document.querySelector('#network').textContent=navigator.onLine?'Trực tuyến':'Ngoại tuyến · chỉ đọc'}network();
 
-async function route(){if(!location.hash||location.hash==='#'||location.hash==='#/')return location.replace('#/dashboard');const [r='dashboard',id]=location.hash.slice(2).split('/');document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.dataset.r===r));document.querySelector('#title').textContent=nav.find(x=>x[0]===r)?.[1].replace(/^\S+ /,'')||'Travel Manager';ui.loading();try{if(r==='settings')return settings();if(!trips.length)trips=await api.list('trips',{},true);if(r==='dashboard')return dashboard();if(r==='trips')return renderTrips();if(entityLabels[r])return generic(r,id);location.replace('#/dashboard')}catch(e){ui.error(e)}}
+async function route(){if(!location.hash||location.hash==='#'||location.hash==='#/')return location.replace('#/dashboard');const r=location.hash.slice(2).split(/[/?]/,1)[0]||'dashboard';document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.dataset.r===r));document.querySelector('#title').textContent=nav.find(x=>x[0]===r)?.[1].replace(/^\S+ /,'')||'Travel Manager';ui.loading();try{if(r==='settings')return settings();if(!trips.length)trips=await api.list('trips',{},true);if(r==='dashboard')return dashboard();if(r==='trips')return renderTrips();if(entityLabels[r])return generic(r);location.replace('#/dashboard')}catch(e){ui.error(e)}}
 addEventListener('hashchange',route);route();
 
 const expenseVnd=r=>Number(r.ConvertedAmount)||(Number(r.Amount)||0)*(Number(r.ExchangeRate)||1);
