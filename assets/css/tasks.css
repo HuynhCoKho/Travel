@@ -1,0 +1,1 @@
+.task-state{display:flex;align-items:center;gap:10px;min-width:195px}.task-check{min-width:0;white-space:nowrap}.task-status{padding:4px 9px;border-radius:999px;background:rgba(12,104,91,.1);color:var(--text);font-size:.82rem;font-weight:600;white-space:nowrap}.task-status.done{background:rgba(0,169,137,.16);color:var(--primary)}
