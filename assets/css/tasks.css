@@ -1,3 +1,7 @@
 .item-main{display:flex;align-items:baseline;gap:10px;min-width:0}.task-deadline{color:var(--muted);white-space:nowrap}.task-check{display:flex;align-items:center;gap:7px;margin-left:6px;white-space:nowrap;color:var(--muted);font-size:.9rem}.task-check input{width:19px;height:19px;accent-color:var(--primary);cursor:pointer}.task-check input:checked+span{color:var(--primary);font-weight:700}
 .form-check{display:flex;align-items:center;gap:10px;min-height:48px}.form-check input{width:20px;height:20px;accent-color:var(--primary);cursor:pointer}
 .packing-state{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.packing-state>span{width:100%;color:var(--muted)}.packing-state .form-check{min-height:auto}
+.item-actions .task-check{min-width:auto}
+.task-check input.pack-packed:checked+span{color:var(--primary)}
+.task-check input.pack-prepared:checked+span{color:var(--accent);font-weight:700}
+@media(max-width:760px){.item-actions{flex-wrap:wrap}.item-actions .task-check{flex:0 0 auto}}
