@@ -1,0 +1,12 @@
+.trip-card .ghost {
+  background: #f7fffc;
+  border-color: #6f948d;
+  color: #07332d;
+  font-weight: 650;
+}
+
+.trip-card .ghost:hover {
+  background: #dff7ef;
+  border-color: #087d70;
+  color: #065c52;
+}

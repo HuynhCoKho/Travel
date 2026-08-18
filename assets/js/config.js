@@ -1,1 +1,1 @@
-window.TRAVEL_APP_CONFIG={API_URL:"https://script.google.com/macros/s/AKfycbxemRg3TV_qOQhvMutsCjwOgCdk4zMkZb8uXnqLyjFCvzFLoN6JIXTL7dw--PTgg_0n/exec",ACCESS_TOKEN:"",APP_NAME:"Travel Manager",DEFAULT_CURRENCY:"VND",DEBUG:false};
+window.TRAVEL_APP_CONFIG={API_URL:"https://script.google.com/macros/s/AKfycbycxZuQeVDvjtOnpoNGtLc5uycfJvACZSF-FjhXRqKNT9-wEyTwp0EL54yoeD-uMfig/exec",ACCESS_TOKEN:"",APP_NAME:"Travel Manager",DEFAULT_CURRENCY:"VND",DEBUG:false};
